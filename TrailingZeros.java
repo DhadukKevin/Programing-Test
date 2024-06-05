@@ -3,26 +3,15 @@ import java.util.*;
 public class TrailingZeros{
 
     public int trailingZeros(int n){
-        long fact = 1;
-        while(n>0){
-            fact *= n;
-            n--;
-        }
-        
-        long temp = fact%10;
-        fact = fact/10;
-        if(temp != 0 ){
-            return 0;
+        if(n < 0){
+            return -1;
         }else{
-            int i=0;
-            while(temp == 0){
-                i++;
-                temp = fact%10;
-                fact = fact/10;
+            int count = 0;
+            for(int i=5;n/i>=1;i*=5){
+                count+=n/i;
             }
-            return i;
+            return count;
         }
-        
     }
 
     public static void main(String args[]){ 
