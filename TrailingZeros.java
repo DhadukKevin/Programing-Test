@@ -2,7 +2,7 @@ import java.util.*;
 
 public class TrailingZeros{
 
-    public int trailingZeros(int n){
+    static int trailingZeros(int n){
         if(n < 0){
             return -1;
         }else{
@@ -19,8 +19,7 @@ public class TrailingZeros{
         System.out.print("Enter N : ");
         int n = sc.nextInt();
 
-        TrailingZeros obj = new TrailingZeros();
-        System.out.print(obj.trailingZeros(n));
+        System.out.print(trailingZeros(n));
 
     }
 }
